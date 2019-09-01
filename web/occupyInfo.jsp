@@ -39,7 +39,7 @@
 
 					<div class="p-t-31 p-b-9">
 						<span class="txt1">
-							账号
+							车牌号
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "请输入你的车牌号">

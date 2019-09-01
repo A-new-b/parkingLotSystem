@@ -12,6 +12,7 @@
     <title>我的主页</title>
     <link rel="stylesheet" href="my_page.css" type="text/css">
     <script src="nomalFunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 <div class="backgrousrud">
@@ -23,16 +24,23 @@
     <div class="body">
     <c:choose>
         <c:when test="${sessionScope.login}">
-            <h1>姓名：${sessionScope.resultUser.name}</h1>
+            <div class="row">
+                <div class="col-lg" style="width: 300px">姓名：${sessionScope.resultUser.name}</div>
+                <div class="col-lg">电话号码：${sessionScope.resultUser.phone}</div>
+                <div class="col-lg">性别：${sessionScope.resultUser.sex}</div>
+            </div>
+            <div>
+                <h3>收费标准：每6分钟一元</h3>
+            </div>
             <c:if test="${requestScope.haveCar}">
-                <table border="1">
+                <table border="1" class="table">
                     <tr>
                         <th>车牌号</th>
                         <th>品牌</th>
                         <th>入库时间</th>
                         <th>备注</th>
                         <th>位置</th>
-                        <th>收费</th>
+<%--                        <th>收费</th>--%>
                         <th>操作</th>
                     </tr>
                     <c:forEach items="${requestScope.cars}" var="car" varStatus="s">

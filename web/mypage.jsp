@@ -29,6 +29,9 @@
                 <div class="col-lg">电话号码：${sessionScope.resultUser.phone}</div>
                 <div class="col-lg">性别：${sessionScope.resultUser.sex}</div>
             </div>
+            <div>
+                <h3>收费标准：每6分钟一元</h3>
+            </div>
             <c:if test="${requestScope.haveCar}">
                 <table border="1" class="table">
                     <tr>

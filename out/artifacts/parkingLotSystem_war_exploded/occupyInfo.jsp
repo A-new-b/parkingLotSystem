@@ -1,38 +1,102 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jue
-  Date: 19-8-26
-  Time: 下午2:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
-    <title>注册</title>
-    <link rel="stylesheet" href="login.css" type="text/css">
+	<title>Login V5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="./images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./css/util.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+<!--===============================================================================================-->
 </head>
-<script>
-</script>
 <body>
-<div >
-    <form action="/parkingLotSystem/occupyInfoServlet" method="post" class="backgroud">
-        <h1>表单</h1>
-        <div class="input">
-            <p>车牌号：</p>
-            <input type="text" name="car_number" placeholder="请输入你的车牌号" />
-        </div>
-        <div class="input">
-            <p>品牌：</p>
-            <input type="text" name="car_brand" placeholder="请输入你的品牌" />
-        </div>
-        <div class="input">
-            <p>备注：</p>
-            <input type="text" name="car_info" placeholder="请输入备注" />
-        </div>
-        <button type="submit" >预约</button>
-    </form>
 
-</div>
+	<div class="limiter">
+		<div class="container-login100" >
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+				<form action="/parkingLotSystem/occupyInfoServlet" method="post" class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-53">
+						车辆登记
+					</span>
+
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							车牌号
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "请输入你的车牌号">
+						<input class="input100" type="text" name="car_number" placeholder="请输入你的车牌号" >
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							品牌
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "请输入品牌">
+						<input class="input100" type="text" name="car_brand" placeholder="请输入你车辆的品牌" >
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							备注
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "请输入备注">
+						<input class="input100" type="text" name="car_info" >
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							预约
+						</button>
+					</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
 </body>
 </html>

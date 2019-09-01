@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100" >
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-				<form action="/parkingLotSystem/login" method="post" class="login100-form validate-form flex-sb flex-w">
+				<form action="/parkingLotSystem/login" method="post" class="login100-form validate-form flex-sb flex-w" style="flex-direction: column">
 					<span class="login100-form-title p-b-53">
 						停车场管理系统
 					</span>
