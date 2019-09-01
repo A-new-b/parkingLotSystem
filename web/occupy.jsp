@@ -12,20 +12,23 @@
     <title>查看停车位</title>
     <link rel="stylesheet" href="my_page.css" type="text/css">
     <script src="nomalFunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 <div class="backgrousrud">
     <div class="headline">
-        <a style="color: white;font-size: 36px;margin-left:2%;cursor: pointer" href="${pageContext.request.contextPath}/mypageServlet">我的主页</a>
+        <a style="color: white;font-size: 36px;margin-left:2%;cursor: pointer"
+           href="${pageContext.request.contextPath}/mypageServlet">我的主页</a>
         <%--        <div style="color: white;font-size: 36px;margin-left:2%;cursor: pointer" onclick="tooccupy()">停车位查看</div>--%>
-        <a style="color: white;font-size: 36px;margin-left:2%;cursor: pointer" href="${pageContext.request.contextPath}/occupyServlet">停车位查看</a>
+        <a style="color: white;font-size: 36px;margin-left:2%;cursor: pointer"
+           href="${pageContext.request.contextPath}/occupyServlet">停车位查看</a>
     </div>
     <div class="body">
         <h1>${requestScope.post_msg}</h1>
         <c:choose>
             <c:when test="${sessionScope.login}">
                 <c:if test="${requestScope.haveSeats}">
-                    <table border="1">
+                    <table border="1" class="table">
                         <tr>
                             <th>位置</th>
                             <th>操作</th>
@@ -33,7 +36,8 @@
                         <c:forEach items="${requestScope.seats}" var="seat" varStatus="s">
                             <tr>
                                 <td>${seat.position}</td>
-                                <td><a href="${pageContext.request.contextPath}/seatServlet?position=${seat.position}">预约</a></td>
+                                <td><a href="${pageContext.request.contextPath}/seatServlet?position=${seat.position}">预约</a>
+                                </td>
                             </tr>
                         </c:forEach>
                     </table>
