@@ -38,8 +38,10 @@ public class exitServlet extends HttpServlet {
             e.printStackTrace();
         }
         int money=(int)(nowtime-Time)/(1000);
+        int min=money/60;
         request.setAttribute("car",car);
         request.setAttribute("money",money);
+        request.setAttribute("min",min);
         request.getRequestDispatcher("/exit.jsp").forward(request,response);
     }
 }

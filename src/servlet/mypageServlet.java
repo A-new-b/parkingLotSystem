@@ -25,16 +25,20 @@ public class mypageServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         HttpSession session=request.getSession();
         user user=(user) session.getAttribute("resultUser");
-        String username = user.getUsername();
-        Dao findcars = new Dao();
-        List<car> cars = findcars.selectCar(username);
-        if(cars!=null) {
-            request.setAttribute("cars", cars);
-            request.setAttribute("haveCar",true );
-        }else {
-            request.setAttribute("haveCar",false );
+        if(user.getUsername() !=null) {
+            String username = user.getUsername();
+            Dao findcars = new Dao();
+            List<car> cars = findcars.selectCar(username);
+            if (cars != null) {
+                request.setAttribute("cars", cars);
+                request.setAttribute("haveCar", true);
+            } else {
+                request.setAttribute("haveCar", false);
+            }
+            request.getRequestDispatcher("/mypage.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("/mypage.jsp").forward(request,response);
+        else
+            request.getRequestDispatcher("/mypage.jsp").forward(request, response);
 
 
     }

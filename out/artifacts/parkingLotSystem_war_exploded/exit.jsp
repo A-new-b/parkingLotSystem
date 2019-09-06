@@ -33,6 +33,7 @@
                 <th>入库时间</th>
                 <th>占有车位</th>
                 <th>所花钱</th>
+                <th>已停时间</th>
             </tr>
             <tr>
                 <th>${requestScope.car.car_number}</th>
@@ -40,7 +41,8 @@
                 <th>${requestScope.car.car_info}</th>
                 <th>${requestScope.car.car_intime}</th>
                 <th>${requestScope.car.car_position}</th>
-                <th>${requestScope.money}</th>
+                <th>${requestScope.money/(60*6)}</th>
+                <th>${requestScope.min}分${requestScope.money%60}秒</th>
             </tr>
         </table>
     </div>

@@ -25,9 +25,9 @@
     <c:choose>
         <c:when test="${sessionScope.login}">
             <div class="row">
-                <div class="col-lg" style="width: 300px">姓名：${sessionScope.resultUser.name}</div>
-                <div class="col-lg">电话号码：${sessionScope.resultUser.phone}</div>
-                <div class="col-lg">性别：${sessionScope.resultUser.sex}</div>
+                <div class="col-lg" style="font-size: 20px">姓名：${sessionScope.resultUser.name}</div>
+                <div class="col-lg" style="font-size: 20px">电话号码：${sessionScope.resultUser.phone}</div>
+                <div class="col-lg" style="font-size: 20px">性别：${sessionScope.resultUser.sex}</div>
             </div>
             <div>
                 <h3>收费标准：每6分钟一元</h3>
